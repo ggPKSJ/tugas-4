@@ -41,8 +41,8 @@ Ubuntu adalah distribusi Linux bebas berlandasan Debian GNU/Linux. (gudanglinux.
 
 #### 1. Langkah Instalasi dan konfigurasi Dionaea  Honeypot 
 	
-	Kelompok kami menggunakan Ubuntu versi 14.04 LTS sebagai server yang akan dijadikan honeypot, sehingga dalam kasus ini kita menggunakan dokumentasi yang telah disediakan untuk menginstall di ubuntu 14.04 LTS.
-	kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](https://dionaea.readthedocs.io/en/latest/installation.html#ubuntu-14-04)) dengan tahapan sebagai berikut
+Kelompok kami menggunakan Ubuntu versi 14.04 LTS sebagai server yang akan dijadikan honeypot, sehingga dalam kasus ini kita menggunakan dokumentasi yang telah disediakan untuk menginstall di ubuntu 14.04 LTS.
+kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](https://dionaea.readthedocs.io/en/latest/installation.html#ubuntu-14-04)) dengan tahapan sebagai berikut
 	
 	1. Update *package database* dengan perintah 
 	```
