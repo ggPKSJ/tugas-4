@@ -44,55 +44,55 @@ Ubuntu adalah distribusi Linux bebas berlandasan Debian GNU/Linux. (gudanglinux.
 Kelompok kami menggunakan Ubuntu versi 14.04 LTS sebagai server yang akan dijadikan honeypot, sehingga dalam kasus ini kita menggunakan dokumentasi yang telah disediakan untuk menginstall di ubuntu 14.04 LTS.
 kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](https://dionaea.readthedocs.io/en/latest/installation.html#ubuntu-14-04)) dengan tahapan sebagai berikut
 	
-	1. Update *package database* dengan perintah 
+1. Update *package database* dengan perintah 
 	```
 	$ sudo apt-get update 
 	```
 	
-	2. Upgrade seluruh versi software package yang telah terinstall dengan perintah 
+2. Upgrade seluruh versi software package yang telah terinstall dengan perintah 
 	```
 	$ sudo apt-get dist-upgrade
 	```
 	
-	3. Menginstall tools untuk mengelola sumber daya PPA dengan perintah 
+3. Menginstall tools untuk mengelola sumber daya PPA dengan perintah 
 	```
 	$ sudo apt-get install software-properties-common
 	```
 	
-	![Instalasi](instalasi/1.PNG)
+![Instalasi](instalasi/1.PNG)
 	
-	4. Menambahkan PPA dionaea honeypot kedalam daftar repository, dengan perintah 
+4. Menambahkan PPA dionaea honeypot kedalam daftar repository, dengan perintah 
 	```
 	$ sudo add-apt-repository ppa:honeynet/nightly
 	```
 	
-	![Instalasi](instalasi/2.PNG)	
+![Instalasi](instalasi/2.PNG)	
 
-	5. Update *package database* dengan perintah 
+5. Update *package database* dengan perintah 
 	```
 	$ sudo apt-get update  
 	```
 	
-	6. Menginstall dionaea package dengan perintah 
+6. Menginstall dionaea package dengan perintah 
 	```
 	$ sudo apt-get install dionaea
 	```
 
-	![Instalasi](instalasi/3.PNG)
+![Instalasi](instalasi/3.PNG)
 
-	7. Starting dionaea service dengan perintah
+7. Starting dionaea service dengan perintah
 	```
 	$ sudo service dionaea start
 	```
 	
 	![Instalasi](instalasi/4.PNG)
 
-	9. Untuk mengecek apakah sudah berhasil atau tidak dengan cara 
+8. Untuk mengecek apakah sudah berhasil atau tidak dengan cara 
 	```
 	ps aux | grep dionaea
 	```
 
-	![Instalasi](instalasi/5.PNG)
+![Instalasi](instalasi/5.PNG)
 
 #### 2. Mempersiapkan metasploit, karena metasploit sendiri sudah terinstall dalam Kali Linux maka kami langsung memakainya.
 	
@@ -100,28 +100,28 @@ kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](
 	
 #### 3. Menginstall pembacaan GUI terhadap log yang terjadi di dionaea dengan menggunakan Modern Honey Network. 
 	
-	kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](https://github.com/threatstream/mhn)) dengan tahapan sebagai berikut
+kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](https://github.com/threatstream/mhn)) dengan tahapan sebagai berikut
 	
-	1. (jika belum punya git) Menginstall git dengan perintah
+1. (jika belum punya git) Menginstall git dengan perintah
 	```
 	$ sudo apt-get install git -y
 	```
 	
-	2. Menaruh peletakan download file dari MHN github. Sebagai contoh kelompok kami menggunakan folder /opt.
+2. Menaruh peletakan download file dari MHN github. Sebagai contoh kelompok kami menggunakan folder /opt.
 	```
 	$ cd /opt
 	$ sudo git clone https://github.com/threatstream/mhn.git
 	$ cd mhn/
 	```
 	
-	3. Menginstall MHN.
+3. Menginstall MHN.
 	```
 	$ ./install.sh
 	```
 	
-	![Instalasi](instalasi/6.PNG)
+![Instalasi](instalasi/6.PNG)
 
-	4. Mengonfigurasi MHN. 
+4. Mengonfigurasi MHN. 
 	Biasanya konfigurasi awal MHN akan keluar seperti ini 
 	### Konfigurasi:
 	===========================================================
@@ -141,32 +141,32 @@ kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](
     Mail default sender [""]: 
     Path for log file ["mhn.log"]: 
 
-	![Instalasi](instalasi/7.PNG)
+![Instalasi](instalasi/7.PNG)
 		
-	5. Konfigurasi dengan splunk, ELK, java8. Kelompok kami menggunakan ELK dan java8
+5. Konfigurasi dengan splunk, ELK, java8. Kelompok kami menggunakan ELK dan java8
 	
-	![Instalasi](instalasi/8.PNG)
-	![Instalasi](instalasi/9.PNG)
-	![Instalasi](instalasi/10.PNG)
+![Instalasi](instalasi/8.PNG)
+![Instalasi](instalasi/9.PNG)
+![Instalasi](instalasi/10.PNG)
 	
-	6.  Untuk mengecek apakah sudah berhasil atau tidak dengan cara 
+6.  Untuk mengecek apakah sudah berhasil atau tidak dengan cara 
 	```
 	ps aux | grep mhn
 	```
 	
-	![Instalasi](instalasi/11.PNG)
+![Instalasi](instalasi/11.PNG)
 	
-	7. Buka Browser dan login pada <http://server_base_url>
+7. Buka Browser dan login pada <http://server_base_url>
 
-	8. Navigate to “Deploy”, and select “Dionaea Ubuntu” in the list
+8. Navigate to “Deploy”, and select “Dionaea Ubuntu” in the list
 	
-	9. Untuk menghubungkan antara MHN dan Honeypot maka menggunakan terminal dan menulisan perintah yang keluar dari langkah nomer 8
+9. Untuk menghubungkan antara MHN dan Honeypot maka menggunakan terminal dan menulisan perintah yang keluar dari langkah nomer 8
 	
 	```
 	wget "http://<ip_of_your_ui_server>/api/script/?text=true&script_id=7" -O deploy.sh && sudo bash deploy.sh http://<ip_of_your_ui_server> <some_key>
 	```
 	
-	10. selesai
+10. selesai
 
 ## Uji Penetrasi
 
