@@ -121,25 +121,7 @@ kami juga melakukan panduan instalasi yang terdapat didalam tutorial ([berikut](
 	
 ![Instalasi](instalasi/6.PNG)
 
-4. Mengonfigurasi MHN. 
-   Biasanya konfigurasi awal MHN akan keluar seperti ini 
-    ### Konfigurasi:
-	===========================================================
-    	MHN Configuration
-    	===========================================================
-    	Do you wish to run in Debug mode?: y/n n
-    	Superuser email: YOUR_EMAIL@YOURSITE.COM
-    	Superuser password: 
-    	Server base url ["http://1.2.3.4"]: 
-    	Honeymap url ["http://1.2.3.4:3000"]:
-    	Mail server address ["localhost"]: 
-    	Mail server port [25]: 
-    	Use TLS for email?: y/n n
-    	Use SSL for email?: y/n n
-    	Mail server username [""]: 
-    	Mail server password [""]: 
-    	Mail default sender [""]: 
-    	Path for log file ["mhn.log"]: 
+4. Mengonfigurasi MHN. Kelompok kami menggunakan konfigurasi sebagai berikut
 
 ![Instalasi](instalasi/7.PNG)
 		
